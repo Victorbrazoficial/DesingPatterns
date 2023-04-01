@@ -17,10 +17,16 @@ namespace DesingPatterns.Application.Strategy.Calculador
 
         public Task<CalculadorDeImposto> IdentificaImposto(ObterICMSRequest request)
         {
-            if (request.imposto.Equals(ImpostoTipo.icms.ToString()))
+            IImposto imposto;
+            switch (request.imposto)
             {
-                var imposto = new ICMS(_taxaImpostoRepository);
-                return imposto.Calcular(request);
+                case ImpostoTipo.Icms:
+                    imposto = new ICMS(_taxaImpostoRepository);
+                    return imposto.Calcular(request);
+                
+                case ImpostoTipo.Iss:
+                    imposto = new ISS(_taxaImpostoRepository);
+                    return imposto.Calcular(request);
             }
 
             return null;
