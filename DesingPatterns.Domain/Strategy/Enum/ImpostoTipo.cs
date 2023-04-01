@@ -1,8 +1,8 @@
 ﻿namespace DesingPatterns.Domain.Strategy.Enum
 {
-    public enum ImpostoTipo
+    public abstract class ImpostoTipo
     {
-        icms,
-        ir
+        public const string Icms = "icms";
+        public const string Iss = "iss";
     }
 }
