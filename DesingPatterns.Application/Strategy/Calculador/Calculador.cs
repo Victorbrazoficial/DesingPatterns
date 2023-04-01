@@ -15,7 +15,7 @@ namespace DesingPatterns.Application.Strategy.Calculador
             _taxaImpostoRepository = taxaImpostoRepository;
         }
 
-        public Task<CalculadorDeImposto> IdentificaImposto(ObterICMSRequest request)
+        public Task<CalculadorDeImposto> IdentificaImposto(ObterImpostoDeduzidoRequest request)
         {
             IImposto imposto;
             switch (request.imposto)

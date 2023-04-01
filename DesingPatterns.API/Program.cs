@@ -15,7 +15,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddScoped<IObterICMSUseCase, ObterICMSUseCase>();
+builder.Services.AddScoped<IObterImpostoDeduzidoUseCase, ObterImpostoDeduzidoUseCase>();
 builder.Services.AddScoped<ITaxaImpostoRepository, TaxaImpostoRepository>();
 builder.Services.AddScoped<ICalculador, Calculador>();
 

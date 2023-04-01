@@ -2,7 +2,7 @@
 
 namespace DesingPatterns.Application.Strategy.Model.Imposto.ICMS
 {
-    public class ObterICMSResponse
+    public class ObterImpostoDeduzidoResponse
     {
         [JsonPropertyName("nome_imposto")]
         public string? NomeImposto { get; set; }

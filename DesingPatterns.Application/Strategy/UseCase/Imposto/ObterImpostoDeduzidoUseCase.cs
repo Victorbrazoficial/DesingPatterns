@@ -4,21 +4,21 @@ using DesingPatterns.Application.Strategy.UseCase.Imposto.Interface;
 
 namespace DesingPatterns.Application.Strategy.UseCase.Imposto
 {
-    public class ObterICMSUseCase : IObterICMSUseCase
+    public class ObterImpostoDeduzidoUseCase : IObterImpostoDeduzidoUseCase
     {
         private readonly ICalculador? _iCalculador;
 
-        public ObterICMSUseCase(ICalculador iCalculador)
+        public ObterImpostoDeduzidoUseCase(ICalculador iCalculador)
         {
             _iCalculador = iCalculador;
         }
 
-        public async Task<ObterICMSResponse> Execute(ObterICMSRequest request)
+        public async Task<ObterImpostoDeduzidoResponse> Execute(ObterImpostoDeduzidoRequest request)
         {
 
             var impostoCalculado = await _iCalculador.IdentificaImposto(request);
 
-            var response = new ObterICMSResponse()
+            var response = new ObterImpostoDeduzidoResponse()
             {
                 NomeImposto = impostoCalculado.NomeImposto,
                 ValorComImpostoDeduzido = impostoCalculado.ValorComImpostoDeduzido,

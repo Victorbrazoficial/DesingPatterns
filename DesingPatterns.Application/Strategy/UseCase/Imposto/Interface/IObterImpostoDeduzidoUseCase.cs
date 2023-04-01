@@ -2,8 +2,8 @@
 
 namespace DesingPatterns.Application.Strategy.UseCase.Imposto.Interface
 {
-    public interface IObterICMSUseCase
+    public interface IObterImpostoDeduzidoUseCase
     {
-        Task<ObterICMSResponse> Execute(ObterICMSRequest request);
+        Task<ObterImpostoDeduzidoResponse> Execute(ObterImpostoDeduzidoRequest request);
     }
 }

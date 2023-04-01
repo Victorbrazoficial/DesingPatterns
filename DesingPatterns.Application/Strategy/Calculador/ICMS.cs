@@ -14,7 +14,7 @@ namespace DesingPatterns.Application.Strategy.Calculador
             _taxaImpostoRepository = taxaImpostoRepository;
         }
 
-        public async Task<CalculadorDeImposto> Calcular(ObterICMSRequest request)
+        public async Task<CalculadorDeImposto> Calcular(ObterImpostoDeduzidoRequest request)
         {
             var icms =  await _taxaImpostoRepository.GetICMS();
 

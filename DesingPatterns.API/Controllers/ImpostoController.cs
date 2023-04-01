@@ -9,7 +9,7 @@ namespace DesingPatterns.API.Controllers
     public class ImpostoController : ControllerBase
     {
         [HttpGet]
-        public async Task<IActionResult> GetICMS([FromBody] ObterICMSRequest request, [FromServices] IObterICMSUseCase useCase)
+        public async Task<IActionResult> GetICMS([FromBody] ObterImpostoDeduzidoRequest request, [FromServices] IObterImpostoDeduzidoUseCase useCase)
         {
             var response = await useCase.Execute(request);
 

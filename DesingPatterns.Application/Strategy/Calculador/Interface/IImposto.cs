@@ -5,6 +5,6 @@ namespace DesingPatterns.Application.Strategy.Calculador.Interface
 {
     public interface IImposto
     {
-        Task<CalculadorDeImposto> Calcular(ObterICMSRequest request);
+        Task<CalculadorDeImposto> Calcular(ObterImpostoDeduzidoRequest request);
     }
 }
