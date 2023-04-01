@@ -2,10 +2,9 @@
 using DesingPatterns.Application.Strategy.Model.Imposto.ICMS;
 using DesingPatterns.Application.Strategy.UseCase.Imposto;
 using DesingPatterns.Application.Strategy.UseCase.Imposto.Interface;
-using Moq;
-using FluentAssertions;
-using DesingPatterns.Domain.Strategy.Imposto;
 using DesingPatters.UnitTests.Mock;
+using FluentAssertions;
+using Moq;
 
 namespace DesingPatters.UnitTests.Application.UseCase
 {
