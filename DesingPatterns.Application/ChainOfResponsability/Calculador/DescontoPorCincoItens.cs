@@ -24,13 +24,13 @@ namespace DesingPatterns.Application.ChainOfResponsability.Calculador
                 descontoEntity.Valor += item.ValorProduto;
             }
 
-            var calculoTaxa = CalculaDesconto(descontoEntity);
+            var calculoDesconto = CalculaDesconto(descontoEntity);
 
             if (descontoEntity.Itens.Count > 5)
             {
                 return new DescontoEntity()
                 {
-                    Valor = calculoTaxa,
+                    Valor = calculoDesconto,
                     Texto = "Você atingiu mais de cinco itens por isso recebeu um desconto de 0.1% em relção ao valor total."
                 };
             }
