@@ -1,7 +1,7 @@
 ﻿using DesingPatterns.Application.Strategy.Calculador.Interface;
 using DesingPatterns.Application.Strategy.Model.Imposto.ICMS;
 using DesingPatterns.Application.Strategy.Repositories;
-using DesingPatterns.Domain.Strategy.Enum;
+using DesingPatterns.Domain.Strategy.Constante;
 using DesingPatterns.Domain.Strategy.Imposto;
 using Moq;
 
