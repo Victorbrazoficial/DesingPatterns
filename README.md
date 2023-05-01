@@ -25,7 +25,7 @@ Nesses casos, o Chain of Responsibility nos possibilita a separação de respons
 # Tecnologias utilizadas
 ## Back end
 - .Net 6.0/c#
-- Asp Net.core
+- Asp.Net core
 - xUnit
 - Insomnia
 # Como executar o projeto
