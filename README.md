@@ -31,19 +31,13 @@ Nesses casos, o Chain of Responsibility nos possibilita a separação de respons
 # Como executar o projeto
 
 ## Back end
-Pré-requisitos: .net 6.0
+- Pré-requisitos: .net 6.0, Visual Studio
 
 ```bash
 # clonar repositório
 git clone https://github.com/Victorbrazoficial/DesingPatterns.git
-
-# entrar na pasta do projeto clonado
-cd "projeto clonado"
-
-# executar o projeto
-.net run
 ```
-
+- Buildar Aplicação
 # Meu Linkedin
 
 https://www.linkedin.com/in/victor-braz-9bb915162/
