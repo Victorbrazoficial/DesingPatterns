@@ -8,8 +8,12 @@ using DesingPatterns.Application.Strategy.Calculador.Interface;
 using DesingPatterns.Application.Strategy.Repositories;
 using DesingPatterns.Application.Strategy.UseCase.Imposto;
 using DesingPatterns.Application.Strategy.UseCase.Imposto.Interface;
+using DesingPatterns.Application.TemplateMethod.Repositories;
+using DesingPatterns.Application.TemplateMethod.UseCase;
+using DesingPatterns.Application.TemplateMethod.UseCase.Interface;
 using DesingPatterns.Infrastructure.Repositories.ChainOfResponsability;
 using DesingPatterns.Infrastructure.Strategy.Repositories.Imposto;
+using DesingPatterns.Infrastructure.TemplateMethod.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -27,7 +31,8 @@ builder.Services.AddScoped<ICalculador, Calculador>();
 builder.Services.AddSingleton<IDescontoUseCase, DescontoUseCase>();
 builder.Services.AddSingleton<ITaxaDescontoRepository, TaxaDescontoRepository>();
 builder.Services.AddSingleton<ICalculadorDescontos, CalculadorDescontos>();
-
+builder.Services.AddSingleton<IImpostoCondicionalRepository, ImpostoCondicionalRepository>();
+builder.Services.AddSingleton<IImpostoCondicionalUseCase, ImpostoCondicionalUseCase>();
 
 var app = builder.Build();
 

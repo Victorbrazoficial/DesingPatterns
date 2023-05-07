@@ -8,7 +8,7 @@ namespace DesingPatterns.Application.Strategy.Model.Imposto.ICMS
         public string? NomeImposto { get; set; }
         [JsonPropertyName("valor_com_imposto_deduzido")]
         public decimal ValorComImpostoDeduzido { get; set; }
-        [JsonPropertyName("taxa_Imposto")]
+        [JsonPropertyName("taxa_imposto")]
         public decimal taxaImposto { get; set; }
     }
 }
