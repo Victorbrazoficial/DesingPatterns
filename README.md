@@ -22,6 +22,14 @@ O Strategy nos oferece uma maneira flexível para escrever diversos algoritmos d
 O padrão Chain of Responsibility cai como uma luva quando temos uma lista de comandos a serem executados de acordo com algum cenário em específico, e sabemos também qual o próximo cenário que deve ser validado, caso o anterior não satisfaça a condição.
 
 Nesses casos, o Chain of Responsibility nos possibilita a separação de responsabilidades em classes pequenas e enxutas, e ainda provê uma maneira flexível e desacoplada de juntar esses comportamentos novamente.
+
+### Template Method
+- Implementamos dois impostos, o ICPP e o IKCV, cada um com sua respectiva taxa de imposto mínimo e máximo. Se o valor do item for maior ou igual a R$ 500,00, será utilizado a taxa máxima para fazer a dedução do imposto, caso contrário, será utilizada a taxa mínima. Aqui a taxa do ICPP é de 5%(mínimo) a 7%(máximo), e a do IKCV varia de 6%(mínimo) a 10%(máximo), de acordo com o valor mínimo e máximo definido para cada uma delas.
+
+O padrão Template Method é uma forma de organizar o código em que uma classe define o esqueleto de um algoritmo, mas deixa alguns detalhes para as suas subclasses. É como uma receita de bolo, onde a massa é sempre a mesma, mas o recheio pode variar. Isso permite que diferentes implementações possam ser criadas, mas seguindo a mesma estrutura básica. 
+
+O objetivo é evitar duplicação de código e aumentar a flexibilidade do sistema.
+
 # Tecnologias utilizadas
 ## Back end
 - .Net 6.0/c#
