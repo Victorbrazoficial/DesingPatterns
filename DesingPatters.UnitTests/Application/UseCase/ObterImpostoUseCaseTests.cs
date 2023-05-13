@@ -28,7 +28,7 @@ namespace DesingPatters.UnitTests.Application.UseCase
                 Valor = 1000
             };
 
-            var response = ObterImpostoResponse.CalculadorDeImpostoReponse();
+            var response = ObterImpostoResponseMock.CalculadorDeImpostoReponse();
 
             var teste = _calculador.Setup(x => x.IdentificaImposto(It.IsAny<ObterImpostoDeduzidoRequest>())).Returns(response);
 

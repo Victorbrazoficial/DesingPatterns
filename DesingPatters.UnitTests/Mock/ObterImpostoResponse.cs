@@ -2,7 +2,7 @@
 
 namespace DesingPatters.UnitTests.Mock
 {
-    public abstract class ObterImpostoResponse
+    public abstract class ObterImpostoResponseMock
     {
         public static async Task<CalculadorDeImposto> CalculadorDeImpostoReponse()
         {

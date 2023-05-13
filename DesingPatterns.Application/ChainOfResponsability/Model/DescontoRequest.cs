@@ -1,6 +1,4 @@
-﻿using DesingPatterns.Domain.ChainOfResponsability.Desconto;
-
-namespace DesingPatterns.Application.ChainOfResponsability.Model
+﻿namespace DesingPatterns.Application.ChainOfResponsability.Model
 {
     public class DescontoRequest
     {
