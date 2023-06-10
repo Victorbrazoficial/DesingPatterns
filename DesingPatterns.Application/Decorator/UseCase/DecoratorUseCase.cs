@@ -20,21 +20,20 @@ namespace DesingPatterns.Application.Decorator.UseCase
 
         public async Task<DecoratorResponse> Execute(DecoratorRequest request)
         {
-            var imposto = GerenciaImposto(request);
-            var repository = _decoratorRepository.GetTaxaImposto(request);
-            var result = SomaDosImpostos(repository, imposto);
+            var repository =  _decoratorRepository.GetTaxaImposto(request);
+            var imposto = GerenciaImposto(request, repository);
+            var result = imposto.SomaImposto();
 
             var response = new DecoratorResponse()
             {
                 TaxaImposto = result,
-                NomeImposto = BuscaNomeImpsotos(repository)
-                
+                NomeImposto = BuscaNomeImpostos(repository) 
             };
 
-            return response;
+            return  response;
         }
 
-        private IImpostoBase GerenciaImposto(DecoratorRequest request)
+        private IImpostoBase GerenciaImposto(DecoratorRequest request, List<ImpostoDecoratorEntity> repository)
         {
             IImpostoBase imposto = new ImpostoBase();
 
@@ -42,36 +41,26 @@ namespace DesingPatterns.Application.Decorator.UseCase
             {
                 if (item.Equals(ImpostosDecoratorConstantes.ISS))
                 {
-                    imposto = new IssDecorator(imposto);
+                    var iss = repository.Where(x => x.NomeImposto.Equals(ImpostosDecoratorConstantes.ISS));
+                    imposto = new IssDecorator(imposto)
+                    {
+                        TaxaImposto = iss.FirstOrDefault().TaxaImposto
+                    };
                 }
                 if (item.Equals(ImpostosDecoratorConstantes.ICMS))
                 {
-                    imposto = new IcmsDecorator(imposto);
+                    var icms = repository.Where(x => x.NomeImposto.Equals(ImpostosDecoratorConstantes.ICMS));
+                    imposto = new IcmsDecorator(imposto)
+                    {
+                        TaxaImposto = icms.FirstOrDefault().TaxaImposto
+                    };
                 }
             }
 
             return imposto;
         }
 
-        private decimal SomaDosImpostos(List<ImpostoDecoratorEntity> repository, IImpostoBase imposto)
-        {
-            var icms = repository.Where(x => x.NomeImposto.Equals(ImpostosDecoratorConstantes.ICMS));
-            var iss = repository.Where(x => x.NomeImposto.Equals(ImpostosDecoratorConstantes.ISS));
-            decimal result = 0;
-
-            if (icms.Any())
-            {
-                result = imposto.SomaImposto(icms.FirstOrDefault().TaxaImposto);
-            }
-            if (iss.Any())
-            {
-                result = imposto.SomaImposto(iss.FirstOrDefault().TaxaImposto);
-            }
-
-            return result;
-        }
-
-        private List<string> BuscaNomeImpsotos(List<ImpostoDecoratorEntity> listaRepository)
+        private List<string> BuscaNomeImpostos(List<ImpostoDecoratorEntity> listaRepository)
         {
             var listaNomes = new List<string>();
 

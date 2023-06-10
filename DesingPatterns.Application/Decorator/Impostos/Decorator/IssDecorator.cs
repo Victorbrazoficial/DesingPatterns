@@ -7,10 +7,10 @@ namespace DesingPatterns.Application.Decorator.Impostos.Decorator
         public IssDecorator(IImpostoBase impostoDecorator) : base(impostoDecorator)
         { }
 
-        public override decimal SomaImposto(decimal taxaImposto)
+        public override decimal SomaImposto()
         {
-            var result = base.SomaImposto(taxaImposto);
-            result += 2; 
+            var result = base.SomaImposto();
+            result += TaxaImposto; 
             return result;
         }
     }

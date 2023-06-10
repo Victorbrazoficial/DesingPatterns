@@ -2,6 +2,6 @@
 {
     public interface IImpostoBase
     {
-        public decimal SomaImposto(decimal taxaImpsoto);
+        public decimal SomaImposto();
     }
 }

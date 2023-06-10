@@ -4,7 +4,7 @@ namespace DesingPatterns.Application.Decorator.Impostos
 {
     public class ImpostoBase : IImpostoBase
     {
-        public decimal SomaImposto(decimal taxaImposto)
+        public decimal SomaImposto()
         {
             return 0;
         }

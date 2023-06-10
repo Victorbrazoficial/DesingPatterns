@@ -5,6 +5,7 @@ namespace DesingPatterns.Application.Decorator.Impostos.Decorator
     public class ImpostoDecorator : IImpostoBase
     {
         private readonly IImpostoBase _impostoBase;
+        public decimal TaxaImposto { get; set; }
 
         public ImpostoDecorator(IImpostoBase impostoBase)
         {
@@ -15,9 +16,9 @@ namespace DesingPatterns.Application.Decorator.Impostos.Decorator
             _impostoBase = null;
         }
 
-        public virtual decimal SomaImposto(decimal taxaImposto)
+        public virtual decimal SomaImposto()
         {
-            return _impostoBase.SomaImposto(taxaImposto);
+            return _impostoBase.SomaImposto();
         }
     }
 }
