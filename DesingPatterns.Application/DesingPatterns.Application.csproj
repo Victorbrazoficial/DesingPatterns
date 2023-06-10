@@ -7,6 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Decorator\Model\Imposto\ICMS - Cópia\**" />
+    <EmbeddedResource Remove="Decorator\Model\Imposto\ICMS - Cópia\**" />
+    <None Remove="Decorator\Model\Imposto\ICMS - Cópia\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\DesingPatterns.Domain\DesingPatterns.Domain.csproj" />
   </ItemGroup>
 
