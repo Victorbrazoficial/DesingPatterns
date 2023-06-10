@@ -15,6 +15,5 @@ namespace DesingPatterns.API.Controllers
 
             return Ok(response);
         }
-
     }
 }
