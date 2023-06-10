@@ -30,6 +30,13 @@ O padrão Template Method é uma forma de organizar o código em que uma classe 
 
 O objetivo é evitar duplicação de código e aumentar a flexibilidade do sistema.
 
+### Decorator
+- Essa implementação permite a inserção de nomes de impostos por meio de uma solicitação. Dentro do serviço, tratamos esses impostos utilizando o padrão Decorator, que nos permite adicionar comportamentos extras de forma flexível. Como resultado, temos como resposta a soma dos impostos fornecidos na solicitação.
+
+O padrão Decorator é uma abordagem de design que permite adicionar recursos adicionais aos objetos de forma flexível, sem modificar sua estrutura principal. Ao contrário da herança tradicional, ele usa a composição para estender as funcionalidades dos objetos. Isso oferece maior modularidade e flexibilidade, permitindo a combinação personalizada de comportamentos em objetos. 
+
+O padrão Decorator é amplamente utilizado para adicionar funcionalidades opcionais ou personalizadas a um objeto, sem afetar outros objetos da mesma classe.
+
 # Tecnologias utilizadas
 ## Back end
 - .Net 6.0/c#
